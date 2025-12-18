@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home - Tweet App
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center py-5">
+    <i class="fab fa-twitter" style="font-size: 5rem; color: #667eea;"></i>
+    <h1 class="display-4 mt-4 mb-3">Welcome to Tweet App</h1>
+    <p class="lead text-muted mb-4">Share your thoughts with the world!</p>
+
+    <div class="d-flex gap-3 justify-content-center">
+        <a href="{% url 'tweet_list' %}" class="btn btn-primary btn-lg">
+            <i class="fas fa-list"></i> View All Tweets
+        </a>
+        <a href="{% url 'tweet_create' %}" class="btn btn-warning btn-lg">
+            <i class="fas fa-plus-circle"></i> Create Tweet
+        </a>
+    </div>
+</div>
+
+{% endblock %}
